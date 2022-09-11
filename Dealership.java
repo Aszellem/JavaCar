@@ -23,15 +23,19 @@ public class Dealership {
         this.cars[index] = null;
     }
 
-    public String search(String make, int budget) {
+    public int search(String make, int budget) {
         for (int i = 0; i < this.cars.length; i++) {
             if (this.cars[i] == null) {
                 continue;
             } else if (this.cars[i].getMake().equals(make) && this.cars[i].getPrice() <= budget) {
-                return "\nWe find one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested?\n";
+                System.out.println(
+                        "\nWe find one in spot " + i + "\n" + this.cars[i].toString() + "\nAre you interested?\n");
+                System.out.print("If you're interested, type 'yes':");
+                return i;
             }
         }
-        return "Sorry, we could not find any cars.";
+        System.out.println("Sorry, we could not find any cars.\n");
+        return 404;
 
     }
 
@@ -40,14 +44,13 @@ public class Dealership {
         String temp = "";
         for (int i = 0; i < this.cars.length; i++) {
             temp += "Parking Spot: " + i + "\n";
-            if(this.cars[i] == null){
+            if (this.cars[i] == null) {
                 temp += "Empty\n";
-            }else{
+            } else {
                 temp += this.cars[i].toString() + "\n";
             }
         }
         return temp;
     }
 
-    
 }

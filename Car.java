@@ -76,7 +76,7 @@ public class Car {
     }
 
     public void drive() {
-        System.out.println("You bought the beautiful " + year + " " + color + " " + make + " for " + price + ". ");
+        System.out.println("\nYou bought the beautiful " + year + " " + color + " " + make + " for " + price + ". ");
         System.out.println("Please drive your car to the nearest exit.\n");
     }
 
