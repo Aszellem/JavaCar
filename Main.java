@@ -37,8 +37,6 @@ public class Main {
             }
         }
 
-        // Task 6 – Ignore letter cases.
-
         scan.close();
 
     }
